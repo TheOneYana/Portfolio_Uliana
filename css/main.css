@@ -8,6 +8,7 @@
   --text: #fdfbd9;
   --main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
   --transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  --shadow: 0 0 15px #9d822b;
 }
 
 @font-face {
@@ -24,7 +25,23 @@ body {
   font-family: raleway_f, sans-serif;
   line-height: 1.55;
 }
-
+.links {
+  z-index: 10;
+  position: absolute;
+  top: calc(var(--index) * 5.25);
+}
+.links2 {
+  z-index: 10;
+  position: absolute;
+  top: calc(var(--index) * 1.9);
+}
+a {
+  list-style: none;
+  color: var(--text);
+  text-shadow: 0 0 15px #9d822b;
+  letter-spacing: calc(var(--index) / 8.25);
+  margin: 0 10px 0 10px;
+}
 .main-header {
   position: relative;
 }
@@ -75,7 +92,7 @@ body {
   will-change: transform;
   transition: var(--transition);
   color: var(--text);
-  text-shadow: 0 0 15px #9d822b;
+  text-shadow: var(--shadow);
   /* color: #e7e6d3; */
 }
 .layers__title {
@@ -85,7 +102,7 @@ body {
 .layers__caption {
   font-size: calc(var(--index) / 1.175);
   letter-spacing: calc(var(--index) / 4.3);
-  /* margin-top: calc(var(--index) * -0.75); */
+  margin-top: calc(var(--index) * -0.65);
 }
 
 .main-article {
@@ -102,11 +119,13 @@ body {
 
 .main-article__header {
   text-transform: uppercase;
-  font-size: calc(var(--index) * 1.8);
+  font-size: calc(var(--index) * 1.2);
+  margin-top: 10px;
   letter-spacing: calc(var(--index) / 7.5);
   transform: var(--main-article-transform);
   will-change: transform;
   transition: var(--transition);
+  text-shadow: 2px 2px #090909;
 }
 .main-article__paragraph {
   max-width: calc(var(--index) * 30);
@@ -115,14 +134,23 @@ body {
   transform: var(--main-article-transform);
   will-change: transform;
   transition: var(--transition);
+  text-shadow: 2px 2px #090909;
 }
 .copy {
   position: absolute;
-  bottom: 15px;
-  opacity: 0.45;
+  bottom: 10px;
+  opacity: 0.55;
   font-size: calc(var(--index) * 0.75);
   letter-spacing: calc(var(--index) / 37.5);
 }
 .content {
   will-change: transform;
+}
+.lnk {
+  font-size: calc(var(--index) * 0.6);
+  text-decoration: none;
+}
+.footer {
+  font-size: calc(var(--index) * 0.6);
+  margin: 8px 0 3px 0;
 }
