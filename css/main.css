@@ -154,3 +154,44 @@ a {
   font-size: calc(var(--index) * 0.6);
   margin: 8px 0 3px 0;
 }
+.icon {
+  height: calc(var(--index) * 3.25);
+}
+.icons {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(6, 200px [col-start]);
+  grid-template-rows: repeat(3, 150px [col-start]);
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--index) * 0.8);
+}
+
+@media (min-width: 365px) and (max-width: 600px) {
+  .icon {
+    height: calc(var(--index) / 0.3);
+  }
+  .icons {
+    margin-top: 0px;
+    grid-template-columns: repeat(4, calc(var(--index) * 7) [col-start]);
+    grid-template-rows: repeat(5, calc(var(--index) * 7) [col-start]);
+    font-size: calc(var(--index) * 1);
+  }
+  .main-article__paragraph {
+    font-size: calc(var(--index) * 1.2);
+  }
+}
+@media (min-width: 601px) and (max-width: 1100px) {
+  .icon {
+    height: calc(var(--index) / 0.3);
+  }
+  .icons {
+    margin-top: 10px;
+    grid-template-columns: repeat(5, calc(var(--index) * 7) [col-start]);
+    grid-template-rows: repeat(4, calc(var(--index) * 6) [col-start]);
+    font-size: calc(var(--index) * 1);
+  }
+  .main-article__paragraph {
+    font-size: calc(var(--index) * 1);
+  }
+}
