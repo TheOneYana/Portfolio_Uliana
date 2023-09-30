@@ -205,6 +205,6 @@ a {
 
 @media (min-width: 1888px) {
   .icon {
-    height: calc(var(--index) * 5.25);
+    height: calc(var(--index) * 3.25);
   }
 }
