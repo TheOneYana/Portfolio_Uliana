@@ -166,7 +166,14 @@ a {
   justify-content: center;
   font-size: calc(var(--index) * 0.8);
 }
-
+.proj_img {
+  max-height: 200px;
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 400px [col-start]);
+  align-items: start;
+}
 @media (min-width: 365px) and (max-width: 600px) {
   .icon {
     height: calc(var(--index) / 0.3);
@@ -193,5 +200,11 @@ a {
   }
   .main-article__paragraph {
     font-size: calc(var(--index) * 1);
+  }
+}
+
+@media (min-width: 1888px) {
+  .icon {
+    height: calc(var(--index) * 5.25);
   }
 }
